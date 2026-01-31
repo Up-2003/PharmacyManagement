@@ -1,0 +1,16 @@
+<html>
+<head><h2>Selling Medicine</h2></head>
+<body>
+<form th:action="@{/bill/generate}" th:object="${bill}" method="post">
+    <label>Medicine:</label>
+    <select th:field="*{medicineId}">
+        <option th:each="m : ${medicines}" th:value="${m.id}" th:text="${m.name}">Med</option>
+    </select><br/>
+    <label>Quantity:</label>
+    <input type="number" th:field="*{quantity}" min="1" required/><br/>
+    <label>Customer Name:</label>
+    <input type="text" th:field="*{customerName}" required/><br/>
+    <button type="submit">Generate Bill</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<h2>Medicine List</h2>
+<a href="/medicines/add">Add Medicine</a>
+<table border="1">
+  <tr><th>ID</th><th>Name</th><th>Description</th><th>Stock</th><th>Price</th><th>Actions</th></tr>
+  <tr th:each="m : ${medicines}">
+    <td th:text="${m.id}"></td>
+    <td th:text="${m.name}"></td>
+    <td th:text="${m.description}"></td>
+    <td th:text="${m.stock}"></td>
+    <td th:text="${m.price}"></td>
+    <td>
+      <a th:href="@{/medicines/edit/{id}(id=${m.id})}">Edit</a> |
+      <a th:href="@{/medicines/delete/{id}(id=${m.id})}">Delete</a>
+    </td>
+  </tr>
+</table>

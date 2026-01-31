@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Bill Details</h2>
+	<p>ID: <span th:text="${bill.id}"/></p>
+	<p>Customer: <span th:text="${bill.customerName}"/></p>
+	<p>Medicine ID: <span th:text="${bill.medicineId}"/></p>
+	<p>Quantity: <span th:text="${bill.quantity}"/></p>
+	<p>Total: <span th:text="${bill.totalAmount}"/></p>
+	<p>Date: <span th:text="${bill.date}"/></p>
+	<a th:href="@{/bill/print/{id}(id=${bill.id})}" target="_blank">🖨️ Print Bill</a>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+    <title>Print Bill</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        .bill { border: 1px solid #000; padding: 20px; width: 400px; }
+    </style>
+</head>
+<body>
+	
+<body onload="window.print()">
+    <div class="bill">
+        <h2>Pharmacy Bill</h2>
+        <p><b>Customer:</b> <span th:text="${bill.customerName}"/></p>
+        <p><b>Medicine ID:</b> <span th:text="${bill.medicineId}"/></p>
+        <p><b>Quantity:</b> <span th:text="${bill.quantity}"/></p>
+        <p><b>Total:</b> <span th:text="${bill.totalAmount}"/></p>
+        <p><b>Date:</b> <span th:text="${bill.date}"/></p>
+    </div>
+</body>
+</html>
+	

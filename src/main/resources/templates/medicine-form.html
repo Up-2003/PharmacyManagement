@@ -1,0 +1,9 @@
+<h2>Medicine Form</h2>
+<form th:action="@{/medicines/save}" th:object="${medicine}" method="post">
+    <input type="hidden" th:field="*{id}" />
+    Name: <input th:field="*{name}" /><br/>
+    Description: <input th:field="*{description}" /><br/>
+    Stock: <input th:field="*{stock}" /><br/>
+    Price: <input th:field="*{price}" /><br/>
+    <button type="submit">Save</button>
+</form>
